@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1085fe2d75de1fe25eaee49ebb360d9ef2313450078040a40c6037455546b6bf
-size 215
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class EmergencyC extends Model
+{
+    use HasFactory;
+
+    protected $guarded = ['id'];
+}

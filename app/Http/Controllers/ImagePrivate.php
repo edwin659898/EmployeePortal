@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3aa63e2db2e2bfe7ea08a41143d7fe888d61606f9af92f81111cb2483019a9a1
-size 447
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+// use App\Models\ImagePrivate;
+
+class ImagePrivate extends Controller
+{
+    // function store_data (Request $request){
+    //     $data = new ImagePrivate;
+
+    //     $data-> docNames = $request->input('docNames');
+    //     $data-> files = $request->input('files');
+    //     $data-> type_document = $request->input('type_document');
+
+    //     $data-> save();
+    // }
+}
