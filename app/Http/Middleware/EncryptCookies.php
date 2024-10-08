@@ -1,17 +1,3 @@
-<?php
-
-namespace App\Http\Middleware;
-
-use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
-
-class EncryptCookies extends Middleware
-{
-    /**
-     * The names of the cookies that should not be encrypted.
-     *
-     * @var array
-     */
-    protected $except = [
-        //
-    ];
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c56acc91a253cc0a078e41e9a093585001c88bac441613582cacaceb063f7731
+size 294

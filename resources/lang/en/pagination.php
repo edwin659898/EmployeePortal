@@ -1,19 +1,3 @@
-<?php
-
-return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Pagination Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used by the paginator library to build
-    | the simple pagination links. You are free to change them to anything
-    | you want to customize your views to better match your application.
-    |
-    */
-
-    'previous' => '&laquo; Previous',
-    'next' => 'Next &raquo;',
-
-];
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c9bed6d2c965666d0c8b9f17f93f87cbfc7a240ead19b3b061764e8238e219f
+size 534
