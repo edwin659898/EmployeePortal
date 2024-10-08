@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:63e92d10f62118215f6a4ee20036e86a26d6867175365429e65de33d0c60ba21
-size 380
+<?php
+
+namespace Tests;
+
+use Illuminate\Contracts\Console\Kernel;
+
+trait CreatesApplication
+{
+    /**
+     * Creates the application.
+     *
+     * @return \Illuminate\Foundation\Application
+     */
+    public function createApplication()
+    {
+        $app = require __DIR__.'/../bootstrap/app.php';
+
+        $app->make(Kernel::class)->bootstrap();
+
+        return $app;
+    }
+}

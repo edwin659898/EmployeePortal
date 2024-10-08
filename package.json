@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:56f952b554066402d39a69e03b9ee7260beb16e11c91e63a4593134bb16ab9a2
-size 1213
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.4",
+        "axios": "^0.21.4",
+        "bootstrap": "^4.0.0",
+        "jquery": "^3.2",
+        "laravel-mix": "^6.0.43",
+        "lodash": "^4.17.19",
+        "popper.js": "^1.12",
+        "postcss": "^8.4.12",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.20.1",
+        "sass-loader": "^8.0.0",
+        "tailwindcss": "^3.0.24",
+        "vue": "^2.5.17",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "bridge-vue-notification": "^1.1.2",
+        "html2canvas": "^1.0.0-rc.7",
+        "jspdf": "^2.3.1",
+        "laravel-vue-pagination": "^2.3.1",
+        "moment": "^2.29.2",
+        "vue-html2pdf": "^1.8.0",
+        "vue-js-modal": "^2.0.1",
+        "vue-pdf": "^4.2.0",
+        "vue-router": "^3.5.1",
+        "vuejs-datepicker": "^1.6.2"
+    }
+}

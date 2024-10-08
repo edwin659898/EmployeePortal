@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0d78fb75464fc3ff4705604834978d37a90eddde9d26f6de7ad51abe3ad13fad
-size 476
+<template>
+  <div>
+      <app-header :user="user.name"/>
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      <app-footer/>
+  </div>
+</template>
+
+<script>
+import AppHeader from "./components/Layouts/Header";
+import AppFooter from "./components/Layouts/Footer";
+export default {
+    components: {AppHeader, AppFooter},
+    data(){
+      return {
+        user: window.user,
+      }
+    }
+}
+</script>
+
+<style>
+
+</style>
