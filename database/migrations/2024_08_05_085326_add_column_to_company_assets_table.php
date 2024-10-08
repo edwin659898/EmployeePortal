@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:47ed8736601d16b083f90126b3385ae238e850cde1bbe164400a5c6ea516b963
-size 608
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddColumnToCompanyAssetsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('company_assets', function (Blueprint $table) {
+            //
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('company_assets', function (Blueprint $table) {
+            //
+        });
+    }
+}
