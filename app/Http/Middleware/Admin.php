@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eb073506342bed3413d4874850515b1f841062cb439b15d46ef377d8dc333af8
-size 460
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+
+class Admin
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle(Request $request, Closure $next)
+    {
+        if (auth()->user()->admin != true) {
+            abort(403,'Forbidden Access');
+        }
+        return $next($request);
+    }
+}

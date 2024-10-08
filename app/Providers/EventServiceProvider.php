@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:643189a885719fa22ea56d36e3ea0bbe1cab203ae50258cc917541939358731b
-size 839
+<?php
+
+namespace App\Providers;
+
+use App\Events\NewUserAdded;
+use App\Listeners\SendDataToMessageApp;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
+use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Event;
+
+class EventServiceProvider extends ServiceProvider
+{
+    /**
+     * The event listener mappings for the application.
+     *
+     * @var array
+     */
+    protected $listen = [
+        Registered::class => [
+            SendEmailVerificationNotification::class,
+        ],
+
+        NewUserAdded::class => [
+            SendDataToMessageApp::class,
+        ]
+    ];
+
+    /**
+     * Register any events for your application.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+}

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45c61457d5625dd9adfec6844fa90fd0a07313d5052822d4e17bdd7f0b1ae9cc
-size 296
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class JobInfo extends Model
+{
+    use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function user(){
+        $this->belongsTo(User::class,'user_id');
+    }
+}
