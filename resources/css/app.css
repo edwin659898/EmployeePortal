@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1a2701cf1d7e501f42a0ca7811a16815344724ab3334d1b21dff7f60279784ce
-size 91
+/* resources/css/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

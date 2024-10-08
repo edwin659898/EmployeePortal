@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9d03ca6ee84a1a6d98aa93f9dd127e38650c3934a5834958c989975f2075cd77
-size 187
+console.log(`Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+    License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+    `)
