@@ -1,3 +1,55 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:34af084d6e174f84ed52a6f6d4c772a36a01db9133ddc1df2987fced0a0d3a5e
-size 1844
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateEmployeeTemplatesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('employee_templates', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->unique()->constrained();
+            $table->string('salutation')->nullable();
+            $table->string('Fname')->nullable();
+            $table->string('street')->nullable();
+            $table->string('apartment')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('Zcode')->nullable();
+            $table->string('Hphone')->nullable();
+            $table->string('Aphone')->nullable();
+            $table->string('Pemail')->nullable();
+            $table->string('nationalId')->nullable();
+            $table->string('Krapin')->nullable();
+            $table->string('nssf')->nullable();
+            $table->string('nhif')->nullable();
+            $table->string('Bankname')->nullable();
+            $table->string('AccNo')->nullable();
+            $table->string('Branchname')->nullable();
+            $table->string('Branchcode')->nullable();
+            $table->string('dob')->nullable();
+            $table->string('status')->nullable();
+            $table->string('spouseN')->nullable();
+            $table->string('spouseE')->nullable();
+            $table->string('spousePhone')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('employee_templates');
+    }
+}

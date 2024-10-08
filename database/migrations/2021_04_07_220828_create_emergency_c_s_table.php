@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d143ab7291b8fc1fa611e16742d945b17c68ec7ae5f9d5029642ee2e65d09558
-size 1117
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateEmergencyCSTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('emergency_c_s', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->unique()->constrained();
+            $table->string('Fname')->nullable();
+            $table->string('street')->nullable();
+            $table->string('apartment')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('Zcode')->nullable();
+            $table->string('Pphone')->nullable();
+            $table->string('Aphone')->nullable();
+            $table->string('relationship')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('emergency_c_s');
+    }
+}

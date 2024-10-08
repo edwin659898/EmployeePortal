@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:37c8350623fa5914e2ae18c82697784d40dd929918fb99e656fe98826106391f
-size 770
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateImagesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('images', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->string('docName');
+            $table->string('file');
+            $table->boolean('is_type_document')->default(1);
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('images');
+    }
+}
