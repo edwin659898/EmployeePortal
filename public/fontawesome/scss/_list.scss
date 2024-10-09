@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2b9e9d7c0f589a363e14544be44ca85d8a0998cdc1f1aef9d9d507f02e06b711
-size 322
+// List Icons
+// -------------------------
+
+.#{$fa-css-prefix}-ul {
+    list-style-type: none;
+    margin-left: $fa-li-width * 5/4;
+    padding-left: 0;
+  
+    > li { position: relative; }
+  }
+  
+  .#{$fa-css-prefix}-li {
+    left: -$fa-li-width;
+    position: absolute;
+    text-align: center;
+    width: $fa-li-width;
+    line-height: inherit;
+  }
+  

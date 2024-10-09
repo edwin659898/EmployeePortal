@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:424d457edfbd99cfcb05333d5ca174279a705fb6afed94703c2141df341dd62b
-size 300
+// Animated Icons
+// --------------------------
+
+.#{$fa-css-prefix}-spin {
+    animation: fa-spin 2s infinite linear;
+  }
+  
+  .#{$fa-css-prefix}-pulse {
+    animation: fa-spin 1s infinite steps(8);
+  }
+  
+  @keyframes fa-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

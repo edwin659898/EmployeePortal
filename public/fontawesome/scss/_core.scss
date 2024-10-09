@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f1f7ae499046987efec2a8767bd1c905977ae1a895afec8f2227305d06edc3b
-size 332
+// Base Class Definition
+// -------------------------
+
+.#{$fa-css-prefix},
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+%fa-icon {
+  @include fa-icon;
+}

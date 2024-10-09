@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a32302a40cda902e45ec84c82426b902ee0a4aa1c8471ff2d6d20b7aca0a570f
-size 428
+// Bordered & Pulled
+// -------------------------
+
+.#{$fa-css-prefix}-border {
+    border: solid .08em $fa-border-color;
+    border-radius: .1em;
+    padding: .2em .25em .15em;
+  }
+  
+  .#{$fa-css-prefix}-pull-left { float: left; }
+  .#{$fa-css-prefix}-pull-right { float: right; }
+  
+  .#{$fa-css-prefix},
+  .fas,
+  .far,
+  .fal,
+  .fab {
+    &.#{$fa-css-prefix}-pull-left { margin-right: .3em; }
+    &.#{$fa-css-prefix}-pull-right { margin-left: .3em; }
+  }
+  
